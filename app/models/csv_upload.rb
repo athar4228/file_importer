@@ -7,6 +7,9 @@ class CsvUpload
   validates :file, presence: true
   validate :file_format
 
+  def process!
+  end
+
   private
 
   def file_format

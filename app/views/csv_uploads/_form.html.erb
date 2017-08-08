@@ -1,0 +1,10 @@
+<%= form_for @csv_upload, method: :post, multipart: true do |f| %>
+
+  <div class="field">
+    <%= f.file_field :file, accept: 'text/csv', required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.submit "Upload" %>
+  </div>
+<% end %>
