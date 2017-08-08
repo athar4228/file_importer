@@ -65,3 +65,6 @@ gem 'smarter_csv'
 
 #Pagination
 gem 'kaminari'
+
+#Styling
+gem 'bootstrap-sass'

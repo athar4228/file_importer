@@ -1,10 +1,15 @@
-<%= form_for @csv_upload, method: :post, multipart: true do |f| %>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <%= form_for @csv_upload, method: :post, multipart: true do |f| %>
+    <div class='form-group'>
+      <div class="row">
+        <%= f.file_field :file, accept: 'text/csv', required: true %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.file_field :file, accept: 'text/csv', required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.submit "Upload" %>
-  </div>
-<% end %>
+    <div class='form-group'>
+      <div class="row">
+        <%= f.submit "Upload", class: "btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

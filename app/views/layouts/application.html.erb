@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class='container'>
+      <div class='row'>
+        <div class='off-canvas-container'>
+          <div class='main-content'>
+            <%= render 'layouts/flash' %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
