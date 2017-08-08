@@ -12,7 +12,7 @@
     <tbody>
       <% @people.each do |person| %>
         <tr>
-          <td><%= person.name %></td>
+          <td><%= titleize(person.name) %></td>
           <td><%= person.email %></td>
           <td><%= person.telephone_number %></td>
           <td><%= person.website %></td>

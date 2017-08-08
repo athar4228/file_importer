@@ -8,4 +8,8 @@ module ApplicationHelper
       notice: 'success',
     } [alert_type.to_sym]
   end
+
+  def titleize(value)
+    value.to_s.titleize
+  end
 end
