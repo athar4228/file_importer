@@ -26,4 +26,12 @@ RSpec.describe CsvUpload, type: :model do
     expect(csv_upload.valid?).to be false
     expect(csv_upload.errors[:file]).to include "can't be blank"
   end
+
+  it 'process file successfully' do
+    csv_upload = CsvUpload.new
+    csv_upload.file = valid_file
+    csv_upload.process!
+
+    expect(Person.count).to be 7 #NOTE check the positive records if file is changed. This count wont be affected as we used database_cleaner
+  end
 end

@@ -6,8 +6,7 @@ class CsvUploadsController < ApplicationController
 
   def create
     @csv_upload = CsvUpload.new(csv_upload_params)
-    if @csv_upload.valid?
-      @csv_upload.process!
+    if @csv_upload.valid? && @csv_upload.process!
       redirect_to new_csv_upload_path
     else
       render :new

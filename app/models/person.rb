@@ -4,4 +4,8 @@ class Person < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 100 }
   validates :email, presence: true, uniqueness: true, length: {  maximum: 100 }, format: EMAIL_REGEX
+
+  def email_or_name
+    self.email || self.name
+  end
 end
