@@ -10,6 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170808175454) do
+
+  create_table "people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                         null: false
+    t.string   "email",                        null: false
+    t.string   "telephone_number", limit: 100
+    t.string   "website",          limit: 100
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["email"], name: "index_people_on_email", unique: true, using: :btree
+    t.index ["name"], name: "index_people_on_name", using: :btree
+  end
 
 end
