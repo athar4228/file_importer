@@ -1,0 +1,21 @@
+<h1>People</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Telephone</th>
+    <th>Website</th>
+  <thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.email %></td>
+        <td><%= person.telephone_number %></td>
+        <td><%= person.website %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
