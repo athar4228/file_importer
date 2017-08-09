@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :people, only: [:index]
 
   root to: "csv_uploads#new"
+
+  get '*path' => redirect("/") #TODO: Handle routing error. Handle this using exception to avoid redirection
 end
